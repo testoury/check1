@@ -1,0 +1,31 @@
+task1
+do{
+  var ch = prompt("write a sentence") ; 
+}while(ch[ch.length-1]!==".") ; 
+
+var nbMot = 0 ; 
+var nbVoy = 0 ; 
+var voy=["a","e","i","o","u","y"]
+
+for (var i =0 ; i<ch.length ; i++){
+  if(ch[i]==" "){
+    nbMot++ ; 
+  }else if(voy.includes(ch[i].toLowerCase())){
+    nbVoy++ ; 
+  }
+}
+if(ch[ch.length-2]!==" "){
+  nbMot++ ;
+}
+
+console.log('number of words',nbMot);
+console.log('number of voyelles',nbVoy) ; 
+-----------------------------------------------
+task 2
+ var tab1=[3, 1, 7, 9];
+var tab2=[2, 4, 1, 9, 3];
+var data = tab1.concat(tab2);
+var nonRepeated = data.filter(function (num) {
+  return data.indexOf(num) === data.lastIndexOf(num);
+});
+console.log(nonRepeated);
